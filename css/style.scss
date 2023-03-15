@@ -1,0 +1,123 @@
+@import "reset";
+@import "variables";
+header {
+  font-size: 2rem;
+  font-family: "Libre Franklin";
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 8rem 8rem 1rem 8rem;
+  color: $dark-blue;
+  overflow: hidden;
+  text-align: center;
+  .logo {
+    margin-bottom: 3rem;
+  }
+  & h1 {
+    font-weight: 300;
+    color: $neut-gray;
+    & strong {
+      color: $dark-blue;
+    }
+    margin-bottom: 0.5rem;
+  }
+  & p {
+    font-size: 1.6rem;
+    margin-bottom: 3rem;
+  }
+  .notify {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 1rem;
+    margin-bottom: 10rem;
+    & input {
+      width: 40rem;
+      outline: none;
+      border: 1px solid $neut-gray;
+      border-radius: 9999px;
+      padding: 1rem 3rem;
+      color: $neut-gray;
+      font-size: 1.6rem;
+    }
+    & a {
+      background-color: $pr-color;
+      border-radius: 9999px;
+      padding: 1rem 5rem;
+      font-size: 1.6rem;
+      text-decoration: none;
+      color: white;
+      box-shadow: 0px 10px 20px $sec-color;
+      transition: transform 0.5s ease;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+  .illust {
+    margin-bottom: 10rem;
+    max-width: 60rem;
+    width: 100%;
+    min-width: 40vh;
+  }
+  .icons {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    color: $pr-color;
+    margin-bottom: 3rem;
+    cursor: pointer;
+    & i:hover {
+      color: $dark-blue;
+    }
+  }
+  footer {
+    & p {
+      font-size: 1.4rem;
+    }
+  }
+}
+@media (max-width: 375px) {
+  header {
+    padding: 4rem 3rem 0.5rem 3rem;
+    overflow: hidden;
+    text-align: center;
+    min-width: 244px;
+    .logo {
+      width: 6rem;
+    }
+    & h1 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 1.4rem;
+    }
+    & p {
+      font-size: 1.2rem;
+      color: $dark-blue;
+    }
+    .notify {
+      flex-wrap: wrap;
+      width: 100%;
+      margin-bottom: 7rem;
+      & input,
+      a {
+        font-size: 1.4rem;
+        text-align: center;
+        width: 100%;
+      }
+    }
+    .illust {
+      margin-bottom: 7rem;
+    }
+  }
+}
+@media (max-width: 768px) {
+  header .notify a {
+    width: 40rem;
+  }
+}
